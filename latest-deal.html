@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>最新成交</title>
+		<link rel="stylesheet" href="css/dropload.css" />
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-style.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>最新成交</h1>
+			<div class="right-box"></div>
+		</header>
+		<div class="main paddding-top-3-5">
+			<div class="deal-box section-box2">
+				<ul>
+					<li>
+						<div class="deal-time">2016年12月</div>
+						<div class="deal-list clearfix">
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img2.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img3.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="deal-time">2016年12月</div>
+						<div class="deal-list clearfix">
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img2.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img3.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img4.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+
+							<a href="#">
+								<div class="top-box">
+									<div class="img-box">
+										<img src="images/img5.png" />
+									</div>
+								</div>
+								<div class="bottom-box">
+									<p>UGG 男士经典短筒靴冬款时尚保暖</p>
+									<p>￥1176.00</p>
+									<p>2016-12-01</p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer class="footer">
+			<a href="index.html" class="active">
+				<img src="images/icon/index-after.png" />
+				<span>首页</span>
+			</a>
+			<a href="seller-list.html">
+				<img src="images/icon/buyer-before.png" />
+				<span>买手</span>
+			</a>
+			<a href="demand-list.html">
+				<img src="images/icon/need-before.png" />
+				<span>需求</span>
+			</a>
+			<a href="seller-center.html">
+				<img src="images/icon/center-before.png" />
+				<span>个人中心</span>
+			</a>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/dropload.min.js"></script>
+		<script>
+			$(function() {
+				// 页数
+				var page = 0;
+				// 每页展示10个
+				var size = 8;
+
+				// dropload
+				$('.deal-box').dropload({
+					scrollArea: window,
+					domUp: {
+						domClass: 'dropload-up',
+						domRefresh: '<div class="dropload-refresh">下拉刷新</div>',
+						domUpdate: '<div class="dropload-update">释放更新</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>刷新中...</div>'
+					},
+					domDown: {
+						domClass: 'dropload-down',
+						domRefresh: '<div class="dropload-refresh">上拉显示更多</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+						domNoData: '<div class="dropload-noData">没有更多的数据了</div>'
+					},
+					loadUpFn: function(me) {
+						$.ajax({
+							type: 'GET',
+							url: 'json/update.json',
+							dataType: 'json',
+							success: function(data) {
+								var result = '';
+								for(var i = 0; i < data.lists.length; i++) {
+									result += '<li><div class="deal-time">' +
+										data[i].date +
+										'</div><div class="deal-list clearfix"><a href="' + data[i].link + '">' +
+										'<div class="top-box"><div class="img-box">' +
+										'<img src="' + data[i].pic + '" />' +
+										'</div></div><div class="bottom-box">' +
+										'<p>' + data[i].title + '</p>' +
+										'<p>' + data[i].price + '</p>' +
+										'<p>' + data[i].date + '</p>' +
+										'</div></a></div></li>'
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									$('.deal-box ul').html(result);
+									// 每次数据加载完，必须重置
+									me.resetload();
+									// 重置页数，重新获取loadDownFn的数据
+									page = 0;
+									// 解锁loadDownFn里锁定的情况
+									me.unlock();
+									me.noData(false);
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					loadDownFn: function(me) {
+						page++;
+						// 拼接HTML
+						var result = '';
+						$.ajax({
+							type: 'GET',
+							url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+							dataType: 'json',
+							success: function(data) {
+								var arrLen = data.length;
+								if(arrLen > 0) {
+									for(var i = 0; i < arrLen; i++) {
+										result += '<li><div class="deal-time">' +
+											data[i].date +
+											'</div><div class="deal-list clearfix"><a href="' + data[i].link + '">' +
+											'<div class="top-box"><div class="img-box">' +
+											'<img src="' + data[i].pic + '" />' +
+											'</div></div><div class="bottom-box">' +
+											'<p>' + data[i].title + '</p>' +
+											'<p>' + data[i].price + '</p>' +
+											'<p>' + data[i].date + '</p>' +
+											'</div></a></div></li>'
+									}
+									// 如果没有数据
+								} else {
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									// 插入数据到页面，放到最后面
+									$('.deal-box ul').append(result);
+									// 每次数据插入，必须重置
+									me.resetload();
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					threshold: 50
+				});
+			});
+		</script>
+	</body>
+
+</html>

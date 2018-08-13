@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>登录</title>
+		<link rel="stylesheet" href="css/hm-login.css" />
+	</head>
+
+	<body>
+		<header>
+			<img src="images/logo.png" />
+		</header>
+		<section class="main">
+			<form class="form-box">
+				<div class="login-account"><input class="" type="text" placeholder="请输入手机号码或者箱地址" id="text" /></div>
+				<div class="login-password"><input type="password" placeholder="请输入正确的密码" id="password" /><span id="close"></span></div>
+			</form>
+			<div class="login-btn">
+				<input type="button" value="登录" />
+			</div>
+		</section>
+		<section class="enroll-box clearfix">
+			<a href="forget.html">忘记密码</a>
+			<a href="register.html">快速注册&gt;</a>
+		</section>
+		<footer>
+			<a href="#">稍后注册&gt;</a>
+		</footer>
+		<script>
+			var passbtn = document.getElementById('password');
+			var closebtn = document.getElementById('close');
+			
+			passbtn.onkeyup = function(){
+			 	var vals = passbtn.value;
+			 	if(vals != ''){
+			 		closebtn.style.opacity = 1 ;
+			 	}else{
+			 		closebtn.style.opacity = 0
+			 	}
+			}
+			
+			closebtn.onclick = function(){
+				document.getElementById('password').value = '';
+				this.style.opacity = 0
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,335 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: none;
+}
+
+*:not(input, textarea) {
+	-webkit-touch-callout: inherit;
+	-webkit-user-select: auto;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+html {
+	font-size: 10px;
+}
+
+
+body {
+	font-size: 1.4em;
+	font-family: "microsoft yahei", sans-serif;
+	-webkit-touch-callout: inherit;
+	-webkit-user-select: auto;
+	background: #fff;
+	color: #333333;
+	min-width: 320px;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+textarea {
+	resize: none;
+	-webkit-appearance: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*---------注册-------------*/
+
+header {
+	text-align: center;
+	padding: 4em 0;
+}
+
+.main {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.main .form-box {
+	text-align: center;
+}
+
+.main .form-box> div {
+	position: relative;
+	padding: 1.5em 0 0.5em 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.main .form-box> div input {
+	width: 100%;
+	border: 0;
+	padding-top: 0.2em;
+	padding-left: 2em;
+	padding-right: 2em;
+	color: #888888;
+}
+
+.main .form-box> div input[type='text'] {
+	background: #FFFFFF url(../images/icon/icon-account-login.png) no-repeat left center;
+	background-size: 6%;
+}
+
+.main .form-box> div input[type='password'] {
+	background: #FFFFFF url(../images/icon/icon-password-login.png) no-repeat left center;
+	background-size: 6%;
+}
+
+.main .form-box> div span {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	opacity: 0;
+	margin-top: -0.4em;
+	height: 1.5em;
+	width: 1.5em;
+	background: transparent url(../images/btn/btn-delete-picture.png) no-repeat center center;
+	background-size: 100%;
+	/*opacity: 0;
+	visibility: hidden;*/
+}
+
+.main .login-btn {
+	margin: 3em 0 2em 0;
+}
+
+.main .login-btn input,.sumbit-box input {
+	width: 100%;
+	border: 0;
+	color: #fbfbfb;
+	background: #333333;
+	padding: 0.6em 0;
+	font-size: 1.3em;
+	letter-spacing: 10px;
+}
+
+.enroll-box {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.enroll-box a {
+	float: left;
+}
+.enroll-box a:active{
+	text-decoration: underline;
+}
+.enroll-box a:last-child {
+	float: right;
+}
+
+
+/*----------注册--------------*/
+
+.nav-bar-level {
+	position: relative;
+	font-size: 1.429em;
+	text-align: center;
+	background: #FFFFFF;
+	padding: 0.5em 0;
+	box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar-level span {
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.nav-bar-level .goback {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	padding: 1em;
+	background: url(../images/btn/return.png) no-repeat center center;
+	background-size: 35%;
+}
+
+.main .form-box> div input[type='tel'] {
+	background: #FFFFFF url(../images/icon/icon-tel-signup.png) no-repeat left center;
+	background-size: 5%;
+	margin-top: 1em;
+}
+
+.main .form-box> div input[type='number'] {
+	background: #FFFFFF url(../images/icon/icon-code-signup.png) no-repeat left center;
+	background-size: 6%;
+}
+
+.main .form-box> div input[type='button'] {
+	position: absolute;
+	padding: 0;
+	top: 50%;
+	right: 0;
+	width: 32%;
+	text-align: center;
+	border: 2px solid #333333;
+	height: 2.4em;
+	margin-top: -1.2em;
+	background: #FFFFFF;
+	color: #333333;
+	font-size: 0.9em;
+	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2) inset;
+}
+.main .form-box> div input[type='email']{
+	background: #FFFFFF url(../images/icon/icon-mail-signup.png) no-repeat left center;
+	background-size: 6%;
+}
+.main .login-btn a {
+	width: 100%;
+	border: 2px solid #333333;
+	padding: 0.5em 0;
+	display: block;
+	font-size: 1.3em;
+	letter-spacing: 10px;
+	margin-top: 1.5em;
+}
+
+.main .login-btn p {
+	padding: 0.5em 0;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	color: #FBFBFB;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1em;
+}
+.main .login-btn span{
+	display: block;
+	margin-top: 1em;
+	color: #888888;
+}
+.checkbox {
+	padding: 2em 0;
+}
+
+.checkbox * {
+	display: inline-block
+}
+
+.checkbox a {
+	text-decoration: underline;
+}
+.checkbox p{
+	vertical-align: middle;
+}
+.checkbox input[type='checkbox'] {
+	padding: 1em;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.checkbox input[type="checkbox"]+label {
+	height: 1.5em;
+	width: 1.5em;
+	background: url(../images/btn/btn-unselected.png) no-repeat center center;
+	background-size:100% ;
+	vertical-align: middle;
+}
+
+.checkbox input[type="checkbox"]:checked+label {
+	background: url(../images/btn/btn-selected.png) no-repeat center center;
+	background-size:100% ;
+}
+
+.main .form-box> div input[type='button'].code:disabled{
+	color: #888888;
+}
+/*忘记密码*/
+.forget-box{
+	padding: 1em;
+}
+
+.forget-box div{
+	margin-bottom: 1em;
+	text-align: left;
+	width: 100%;
+}
+.forget-box label{
+	width: 30%;
+	display: inline-block;
+}
+.forget-box div input{
+	border: 1px solid #CCCCCC;
+	padding:0.5em 1em;
+	width: 69%;
+	margin-left: 1%;
+}
+footer {
+	margin-top: 3em;
+	width: 100%;
+	text-align: center;
+}
+
+@media (min-width: 360px) {
+	body {
+		font-size: 1.6em;
+	}
+}

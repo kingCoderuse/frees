@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>申请提现</title>
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>申请提现</h1>
+			<div class="right-box"></div>
+		</header>
+		<section class="envelope-box envelope-operate-box paddding-top-3-5">
+			<div class="top-box">
+				<p><img src="images/icon/img-redpacket.png" /> </p>
+				<p>当前红包余额</p>
+				<p><span>2000.00</span>元</p>
+			</div>
+			<div class="bottom-box">
+				<p>选择提现方式</p>
+				<ul>
+					<li class="display-table">
+						<div class="img-box display-table-cell"><img src="images/icon/icon-wechat-pay.png" /></div>
+						<div class="account-box display-table-cell">
+							<p>微信</p>
+							<p>推荐安装微信5.0及以上版本的用户使用</p>
+						</div>
+						<div class="check-box display-table-cell">
+							<input type="radio" name="accout" id="radio1" checked="" /><label for="radio1"></label>
+						</div>
+					</li>
+					<li class="display-table">
+						<div class="img-box display-table-cell"><img src="images/icon/icon-alipay.png" /></div>
+						<div class="account-box display-table-cell">
+							<p>支付宝</p>
+							<p>推荐有支付宝账号的用户使用</p>
+						</div>
+						<div class="check-box display-table-cell">
+							<input type="radio" name="accout" id="radio2" /><label for="radio2"></label>
+						</div>
+					</li>
+					<li class="display-table">
+						<div class="img-box display-table-cell"><img src="images/icon/icon-card-pay.png" /></div>
+						<div class="account-box display-table-cell">
+							<p>银行卡</p>
+							<p>安全急速提现</p>
+						</div>
+						<div class="check-box display-table-cell">
+							<input type="radio" name="accout" id="radio3" /><label for="radio3"></label>
+						</div>
+					</li>	
+				</ul>
+				<div class="amount-box">
+					<label for="sum">提现金额：</label><input type="number" id="sum" placeholder="请输入要提取的金额" />
+				</div>
+			</div>
+			<div class="btn-approve">
+					<input type="submit" value="确定提交" />
+				</div>
+		</section>
+		
+	</body>
+
+</html>

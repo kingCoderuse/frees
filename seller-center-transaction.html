@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>发起交易</title>
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>发起交易</h1>
+			<div class="right-box"></div>
+		</header>
+
+		<div class="main paddding-top-3-5 paddding-bottom-5">
+			<section class="forms-box">
+				<form class="forms-box-list">
+					<ul style="margin-bottom: 0;" class="copy-box">
+						<li>
+							<div><label for="name4">商品名称<span class="mark">*</span></label><input type="text" id="name4" placeholder="XX商品" name="count-title" /></div>
+						</li>
+						<li>
+							<div><label for="num">商品数量<span class="mark">*</span></label><input type="number" id="num" placeholder="请输入整数" name="count-num" onblur="limitChange(this)" /></div>
+						</li>
+						<li>
+							<div>
+								<label for="sex">商品价格<span class="mark">*</span></label><input type="number" id="price" placeholder="0" name="count-price" />
+							</div>
+						</li>
+						<li>
+							<div><label>商品照片</label><input type="text" placeholder="上传商品照片（限9张）" readonly="readonly"></div>
+							<div class="preview-list">
+								<ul class="clearfix">
+									<li><input type="file" accept="image/*" /> </li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="add-again">
+						<li>
+							<div class='add-shop-btn stutas-btn'><input style="display: none;" type="button" id="del" value="删除" onclick="dels()" /><input type="button" id="add" value="添加商品" onclick="adds()" /></div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div><label for="buyerid">收货人ID</label><input type="text" id="buyerid" placeholder="ID" /></div>
+						</li>
+
+					</ul>
+					<ul>
+						<li>
+							<div><label for="envelope">红包</label><input type="number" id="envelope" placeholder="￥0" name="count" /></div>
+						</li>
+						<li>
+							<div class="tip-box"><input type="text" id="note" placeholder="在此输入备注（例：运费含在红包中）" /></div>
+						</li>
+					</ul>
+					<ul>
+						<li class="sum-box">
+							<div class="sum-price clearfix"><span>合计：</span><span class="last-child" id="total"><i>￥</i>0</span></div>
+						</li>
+					</ul>
+				</form>
+				<div class="form-btn">
+					<a href="JavaScript:void(0)" class="exit-btn">发起交易</a>
+				</div>
+			</section>
+		</div>
+
+		<div class="poup share-shadow">
+			<div class="share-box">
+				<div class="close-box">
+				</div>
+
+				<p>发起交易成功！</p>
+				<div class="share-box-list">
+					<p>分享至</p>
+					<ul>
+						<li>
+							<a href="#" class="weixin-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="friend-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="qq-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="xinlang-icon"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function() {
+				$('.exit-btn').click(function() {
+					if($('input[name=count-num]').val() == '' || $('input[name=count-price]').val() == '' || $('input[name=count-title]').val() == '') {
+						alert('打*的选项不能为空')
+					} else {
+						$('.poup').show();
+						$('body,html').css({
+							'height': '100%',
+							'width': '100%',
+							'overflow': 'hidden'
+						})
+					}
+				})
+				$('.close-box').click(function() {
+					$('.poup').hide();
+					$('body,html').css({
+						'height': 'auto',
+						'width': 'auto',
+						'overflow': 'auto'
+					})
+				})
+			})
+
+			function adds() {
+				var $copybox = '<ul style="margin-top:1em;margin-bottom:0" class="copy-box">' +
+					'<li><div><label for="name4">商品名称<span class="mark">*</span></label><input type="text" id="name4" placeholder="XX商品" name="count-title" /></div></li>' +
+					'<li><div><label for="num">商品数量<span class="mark">*</span></label><input type="number" id="num" placeholder="请输入整数" name="count-num" /></div></li>' +
+					'<li><div><label for="sex">商品价格<span class="mark">*</span></label><input type="number" id="price" placeholder="0" name="count-price" /></div></li>' +
+					'<li><div><label>商品照片</label><input type="text" placeholder="上传商品照片（限9张）" readonly="readonly"></div>' +
+					'<div class="preview-list">' +
+					'<ul class="clearfix">' +
+					'<li><input type="file" accept="image/*" /> </li>' +
+					'</ul></div></li></ul>'
+				$('.copy-box').last().after($copybox);
+				$('#del').show();
+			}
+
+			function dels() {
+				var i = $('.copy-box').length;
+				var flag;
+				if(i > 1) {
+					$('.copy-box').last().remove();
+					--i;
+				} else if(i == 1) {
+					$('#del').hide()
+				}
+			}
+
+			function isNumber(d) {
+				return /^[0-9]+$/.test("" + d);
+			}
+
+			function limitChange(obj) {
+				if(obj.value != "") {
+					if(!isNumber(obj.value)) {
+						obj.value = Math.round(obj.value);
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>收货地址</title>
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>收货地址</h1>
+			<div class="right-box">
+				<a href="address-add.html">添加</a>
+			</div>
+		</header>
+		<div class="main paddding-top-3-5">
+			<section class="address-boxes">
+				<ul>
+					<li>
+						<a href="#">
+							<p class="clearfix"><span>某某某</span><span>13616492792</span></p>
+							<p class="address-box-text">浙江省 杭州市 江干区 金沙湖一号1503</p>
+							<div class="radio-box clearfix">
+								<div class="input-check"><span class="radio-box-list"><input type="radio" id="checkbox1" name="radioes" checked="checked" /><label for="checkbox1"></label></span><span>默认地址</span></div>
+								<div class="btn"><input type="button" /></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p class="clearfix"><span>某某某</span><span>13616492792</span></p>
+							<p class="address-box-text">浙江省 杭州市 江干区 金沙湖一号1503</p>
+							<div class="radio-box clearfix">
+								<div class="input-check"><span class="radio-box-list"><input type="radio" id="checkbox2" name="radioes" /><label for="checkbox2"></label></span><span>默认地址</span></div>
+								<div class="btn"><input type="button" /></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p class="clearfix"><span>某某某</span><span>13616492792</span></p>
+							<p class="address-box-text">浙江省 杭州市 江干区 金沙湖一号1503</p>
+							<div class="radio-box clearfix">
+								<div class="input-check"><span class="radio-box-list"><input type="radio" id="checkbox3" name="radioes" /><label for="checkbox3"></label></span><span>默认地址</span></div>
+								<div class="btn"><input type="button" /></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p class="clearfix"><span>某某某</span><span>13616492792</span></p>
+							<p class="address-box-text">浙江省 杭州市 江干区 金沙湖一号1503</p>
+							<div class="radio-box clearfix">
+								<div class="input-check"><span class="radio-box-list"><input type="radio" id="checkbox4" name="radioes" /><label for="checkbox4"></label></span><span>默认地址</span></div>
+								<div class="btn"><input type="button" /></div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			$('.address-boxes ul li a .radio-box .btn input').click(function() {
+				var $poup = '<div class="poup"><div class="del-box"><p>确定删除该地址吗？</p><span>地址删除后后将无法恢复</span><div class="btn-box clearfix"><a href="javascript:void(0)" class="cancel-btn">取消</a><a href="javascript:void(0)" class="ok-btn">确定</a></div></div></div>'
+				$(this).parents('.address-boxes ul li a').append($poup);
+				$('.cancel-btn').click(function() {
+					$(this).parents('.poup').remove();
+				})
+				$('.ok-btn').click(function() {
+					$(this).parents('.address-boxes ul li a').remove();
+				})
+			});
+		</script>
+	</body>
+
+</html>

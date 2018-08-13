@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>系统通知</title>
+		<link rel="stylesheet" href="css/dropload.css" />
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>系统通知</h1>
+			<div class="right-box"></div>
+		</header>
+		<div class="paddding-top-3-5">
+			<section class="new-notice system-box">
+				<ul>
+					<li>
+						<p class="time-order"><span>2016-12-01</span></p>
+						<a href="#">
+							<p>欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台欢迎使用XXX代购平台。</p>
+						</a>
+					</li>
+					<li>
+						<p class="time-order"><span>2016-12-01</span></p>
+						<a href="#">
+							<p>订单已发货</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/dropload.min.js"></script>
+		<script>
+			$(function() {
+				// 页数
+				var page = 0;
+				// 每页展示10个
+				var size = 10;
+
+				// dropload
+				$('.new-notice').dropload({
+					scrollArea: window,
+					domUp: {
+						domClass: 'dropload-up',
+						domRefresh: '<div class="dropload-refresh">下拉刷新</div>',
+						domUpdate: '<div class="dropload-update">释放更新</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>刷新中...</div>'
+					},
+					domDown: {
+						domClass: 'dropload-down',
+						domRefresh: '<div class="dropload-refresh">上拉显示更多</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+						domNoData: '<div class="dropload-noData">没有更多的数据了</div>'
+					},
+					loadUpFn: function(me) {
+						$.ajax({
+							type: 'GET',
+							url: 'json/more.json',
+							dataType: 'json',
+							success: function(data) {
+								var result = '';
+								for(var i = 0; i < data.lists.length; i++) {
+									result += '<li>' +
+										'<p class="time-order"><span>' + data[i].time + '</span></p>' +
+										'<a href="' + data[i].link + '">' +
+										'<p>订单已发货</p></a></li>'
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									$('.new-notice ul').html(result);
+									// 每次数据加载完，必须重置
+									me.resetload();
+									// 重置页数，重新获取loadDownFn的数据
+									page = 0;
+									// 解锁loadDownFn里锁定的情况
+									me.unlock();
+									me.noData(false);
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					loadDownFn: function(me) {
+						page++;
+						// 拼接HTML
+						var result = '';
+						$.ajax({
+							type: 'GET',
+							url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+							dataType: 'json',
+							success: function(data) {
+								var arrLen = data.length;
+								if(arrLen > 0) {
+									for(var i = 0; i < arrLen; i++) {
+										result += '<li>' +
+											'<p class="time-order"><span>' + data[i].time + '</span></p>' +
+											'<a href="' + data[i].link + '">' +
+											'<p>订单已发货</p></a></li>'
+									}
+									// 如果没有数据
+								} else {
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									// 插入数据到页面，放到最后面
+									$('.new-notice ul').append(result);
+									// 每次数据插入，必须重置
+									me.resetload();
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					threshold: 50
+				});
+			});
+		</script>
+	</body>
+
+</html>

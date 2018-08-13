@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>热点资讯</title>
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-style.css" />
+	</head>
+
+	<body class="bg-color-white">
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>热点资讯</h1>
+			<div class="right-box"></div>
+		</header>
+		<div class="main paddding-top-4 paddding-bottom-5">
+			<div class="content-new">
+				<h1>半年网购投诉同比增四倍 海淘代购咋选择？</h1>
+				<div class="operation-box display-table">
+					<div class="new-time display-table-cell">发布时间：2017-01-01</div>
+					<div class="operation-list-box display-table-cell">
+						<a href="#" class="zan-btn" id="zan"><span class="zan-icon" id="zan-icon"></span><span class="zan-num" id="zan-num">0</span></a>
+						<a href="#" class="share-btn" id="share-btn"><span class="share-icon" id="share-icon"></span></a>
+					</div>
+				</div>
+				<img src="images/new1.png" />
+				<p>11月4日消息，2016“双十一”将至，各大电商 纷纷开始造势。但是每年“双十一”过后，都会 出现一次相对集中的投诉“高潮”，记者从济南 市工商局获悉，去年济南市网络购物投诉占总投 诉的1/3以上，2016年上半年，济南网络购物投 诉比去年上半年增加4.2倍。工商部门提醒广大消 费者理性消费，依法维权。 据统计，去年的11月11日当天，全网单天交易额 达1229.37亿元，同比增长52.70%，产生包裹数 6.78亿个，有资料统计2015年网络集中促销活动 期间媒体和网民反映最多的十类失信问题中，以 劣充好、误导宣传、虚假广告问题位居前三。记 者从济南市工商局消保处获悉，去年济南市网络 购物投诉占总投诉的1/3以上，2016年上半年， 济南网购投诉比去年同期增加4.2倍。 工商部门提醒消费者谨慎选择海淘、代购 山东省工商局提醒广大消费者要坚持理性消费， 根据自己需求选购商品，不能图一时便宜而冲动 下单。谨防低价陷阱，避免购买到价低、质劣、 量不足的商品。工商部门特别提醒，当前海淘、 代购模式日益盛行，尤其在母婴、化妆品、小食 品领域，涌现了一批专门从事跨境代购的电商平 台，但由于国内外法律不同、商品质量标准体系 不同，加之海淘代购商品不属于进口商品，无中 文标贴，无法全面衡量所购商品的优劣，因此应 谨慎选择海淘、代购。 此外，有的商家故意混淆“定金”与“订金”概 念，设置花样繁多的“预售”模式，误导消费者 交付不可退还的定金。要事先与商家沟通，了解 定金、订金的法律责任，对于预付定金的商品， 要谨慎下单。收到商品后，应在第一时间查看商 品是否与商家发布的商品信息一致，有无损坏或 其他问题。当自身合法权益受到损害时，可向商 家协商处理，也可向网络交易平台投诉，或者拨 打网络交易平台所在地或商家所在地的12315电 话、12345电话进行投诉，必要时可将保存的证 据形成材料，寄送给相关监管部门。
+				</p>
+			</div>
+		</div>
+		<footer class="footer">
+			<a href="index.html" class="active">
+				<img src="images/icon/index-after.png" />
+				<span>首页</span>
+			</a>
+			<a href="buyer.html">
+				<img src="images/icon/buyer-before.png" />
+				<span>买手</span>
+			</a>
+			<a href="demand.html">
+				<img src="images/icon/need-before.png" />
+				<span>需求</span>
+			</a>
+			<a href="center.html">
+				<img src="images/icon/center-before.png" />
+				<span>个人中心</span>
+			</a>
+		</footer>
+
+		<script>
+			
+			var zanbtn = document.getElementById('zan');
+			var zanicon = document.getElementById('zan-icon');
+			var zannum = document.getElementById('zan-num');
+			var sharebtn = document.getElementById('share-btn');
+			var shareicon = document.getElementById('share-icon')
+			sharebtn.onclick = function() {
+				shareicon.className = 'share-icon share-icon-btn'
+			}
+			zanbtn.onclick = function() {
+				var num = parseInt(zannum.innerText);
+				if(zanicon.className == 'zan-icon') {
+					zanicon.style.background = 'url(images/btn/zan.png) center center';
+					zanicon.style.backgroundSize = '100%';
+					zanicon.className = 'zan-icon zanmation';
+					num += 1;
+					zannum.innerHTML = num;
+				} else {
+					alert('您已经点过赞啦')
+				}
+			}
+		</script>
+	</body>
+
+</html>

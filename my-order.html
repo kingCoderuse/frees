@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>我的订单</title>
+		<link rel="stylesheet" href="css/dropload.css" />
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level clearfix">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>我的订单</h1>
+			<div class="right-box"></div>
+		</header>
+
+		<div class="main paddding-top-3-5">
+			<ul class="order-list clearfix">
+				<li class="on">全部</li>
+				<li>待付款</li>
+				<li>待发货</li>
+				<li>待收货</li>
+				<li>已完成</li>
+			</ul>
+			<div class="order-box">
+				<p class="stutas"></p>
+				<section class="list-need list-need1 order-box-list1">
+					<ul>
+						<li>
+							<a href="my-order-detail-pay.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待付款</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="确认付款" name="refer-pay" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-send.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待发货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img5.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img5.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="my-order-detail-harvest.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待收货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/IMG0.jpg" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="延长收货时间" />
+								<input type="button" value="确认收货" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-complete.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas order-stutas-over">已完成</span>
+								</div>
+								<div class="display-table">
+									<div class="display-table-cell shop-img">
+										<img src="images/need/img7.png" />
+									</div>
+									<div class="display-table-cell shop-infor">
+										<h3>求代购ANNUNCIATION 孕妇面膜IATION 孕妇面膜</h3>
+									</div>
+									<div class="display-table-cell number-box">
+										<p>x&nbsp;5</p>
+										<p>￥15000.00</p>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<a href="my-order-detail-complete-comment.html" class="comment-btn">发表评论</a>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="list-need list-need1 order-box-list2">
+					<ul>
+						<li>
+							<a href="my-order-detail-pay.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待付款</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="确认付款" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-pay.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待付款</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="确认付款" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-pay.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待付款</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="确认付款" />
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="list-need list-need1 order-box-list3">
+					<ul>
+						<li>
+							<a href="my-order-detail-send.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待发货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="my-order-detail-send.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待发货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="my-order-detail-send.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待发货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<section class="list-need list-need1 order-box-list4">
+					<ul>
+						<li>
+							<a href="my-order-detail-harvest.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待收货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="延长收货时间" />
+								<input type="button" value="确认收货" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-harvest.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待收货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="延长收货时间" />
+								<input type="button" value="确认收货" />
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-harvest.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas">待收货</span>
+								</div>
+								<div class="order-list-shop">
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img7.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+									<div class="display-table">
+										<div class="display-table-cell shop-img">
+											<img src="images/need/img5.png" />
+										</div>
+										<div class="display-table-cell shop-infor">
+											<h3>求代购</h3>
+										</div>
+										<div class="display-table-cell number-box">
+											<p>x&nbsp;5</p>
+											<p>￥15000.00</p>
+										</div>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<input type="button" value="延长收货时间" />
+								<input type="button" value="确认收货" />
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="list-need list-need1 order-box-list5">
+					<ul>
+						<li>
+							<a href="my-order-detail-complete.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas order-stutas-over">已完成</span>
+								</div>
+								<div class="display-table">
+									<div class="display-table-cell shop-img">
+										<img src="images/need/img7.png" />
+									</div>
+									<div class="display-table-cell shop-infor">
+										<h3>求代购ANNUNCIATION 孕妇面膜IATION 孕妇面膜</h3>
+									</div>
+									<div class="display-table-cell number-box">
+										<p>x&nbsp;5</p>
+										<p>￥15000.00</p>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<a href="my-order-detail-complete-comment.html" class="comment-btn">发表评论</a>
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-complete.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas order-stutas-over">已完成</span>
+								</div>
+								<div class="display-table">
+									<div class="display-table-cell shop-img">
+										<img src="images/need/img7.png" />
+									</div>
+									<div class="display-table-cell shop-infor">
+										<h3>求代购ANNUNCIATION 孕妇面膜IATION 孕妇面膜</h3>
+									</div>
+									<div class="display-table-cell number-box">
+										<p>x&nbsp;5</p>
+										<p>￥15000.00</p>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<a href="my-order-detail-complete-comment.html" class="comment-btn">发表评论</a>
+							</div>
+						</li>
+						<li>
+							<a href="my-order-detail-complete.html">
+								<div class="buyer-name">
+									<span><img src="images/img.png" /> </span>
+									<span>需求方昵称（ID）</span>
+									<span class="order-stutas order-stutas-over">已完成</span>
+								</div>
+								<div class="display-table">
+									<div class="display-table-cell shop-img">
+										<img src="images/need/img7.png" />
+									</div>
+									<div class="display-table-cell shop-infor">
+										<h3>求代购ANNUNCIATION 孕妇面膜IATION 孕妇面膜</h3>
+									</div>
+									<div class="display-table-cell number-box">
+										<p>x&nbsp;5</p>
+										<p>￥15000.00</p>
+									</div>
+								</div>
+								<div class="all">
+									<p class="nth-child1">共计5件商品 合计<span>￥805.00</span></p>
+									<p class="nth-child2">(含红包￥300.00 平台服务费￥5.00）</p>
+								</div>
+							</a>
+							<div class="stutas-btn">
+								<a href="my-order-detail-complete-comment.html" class="comment-btn">发表评论</a>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/dropload.min.js"></script>
+		<script>
+			$(function() {
+				// 页数
+				var page = 0;
+				// 每页展示10个
+				var size = 5;
+
+				// dropload
+				$('.list-need').dropload({
+					scrollArea: window,
+					domUp: {
+						domClass: 'dropload-up',
+						domRefresh: '<div class="dropload-refresh">下拉刷新</div>',
+						domUpdate: '<div class="dropload-update">释放更新</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>刷新中...</div>'
+					},
+					domDown: {
+						domClass: 'dropload-down',
+						domRefresh: '<div class="dropload-refresh">上拉显示更多</div>',
+						domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+						domNoData: '<div class="dropload-noData">没有更多的数据了</div>'
+					},
+					loadUpFn: function(me) {
+						$.ajax({
+							type: 'GET',
+							url: 'json/update.json',
+							dataType: 'json',
+							success: function(data) {
+								var result = '';
+								for(var i = 0; i < data.lists.length; i++) {
+									result += '<li>' +
+										'	<div class="buyer-name">' +
+										'<span><img src="' + data[i].pic + '" /> </span>' +
+										'<span>' + data[i].name + '</span>' +
+										'</div>' +
+										'<a href="' + data[i].link + '">' +
+										'<div class="display-table">' +
+										'<div class="display-table-cell shop-img">' +
+										'<img src="' + data[i].pic + '" />' +
+										'</div>' +
+										'<div class="display-table-cell shop-infor">' +
+										'<h3>' + data[i].title + '</h3>' +
+										'<p>' + data[i].des + '</p>' +
+										'</div>' +
+										'</div>' +
+										'</a>' +
+										'<div class="del-btn">' +
+										'	<input type="button" value="删除需求" />' +
+										'</div>' +
+										'	</li>'
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									$('.list-need ul').html(result);
+									// 每次数据加载完，必须重置
+									me.resetload();
+									// 重置页数，重新获取loadDownFn的数据
+									page = 0;
+									// 解锁loadDownFn里锁定的情况
+									me.unlock();
+									me.noData(false);
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					loadDownFn: function(me) {
+						page++;
+						// 拼接HTML
+						var result = '';
+						$.ajax({
+							type: 'GET',
+							url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+							dataType: 'json',
+							success: function(data) {
+								var arrLen = data.length;
+								if(arrLen > 0) {
+									for(var i = 0; i < arrLen; i++) {
+										result += '<li>' +
+											'	<div class="buyer-name">' +
+											'<span><img src="' + data[i].pic + '" /> </span>' +
+											'<span>' + data[i].name + '</span>' +
+											'</div>' +
+											'<a href="' + data[i].link + '">' +
+											'<div class="display-table">' +
+											'<div class="display-table-cell shop-img">' +
+											'<img src="' + data[i].pic + '" />' +
+											'</div>' +
+											'<div class="display-table-cell shop-infor">' +
+											'<h3>' + data[i].title + '</h3>' +
+											'<p>' + data[i].des + '</p>' +
+											'</div>' +
+											'</div>' +
+											'</a>' +
+											'<div class="del-btn">' +
+											'	<input type="button" value="删除需求" />' +
+											'</div>' +
+											'	</li>'
+									}
+									// 如果没有数据
+								} else {
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+								}
+								// 为了测试，延迟1秒加载
+								setTimeout(function() {
+									// 插入数据到页面，放到最后面
+									$('.list-need ul').append(result);
+									// 每次数据插入，必须重置
+									me.resetload();
+								}, 1000);
+							},
+							error: function(xhr, type) {
+								alert('请求失败!');
+								// 即使加载出错，也得重置
+								me.resetload();
+							}
+						});
+					},
+					threshold: 50
+				})
+
+			});
+		</script>
+		<script>
+			$(function() {
+				$('.order-list li').click(function() {
+					$(this).addClass('on').siblings('.order-list li').removeClass('on');
+					$('.order-box > section').hide().eq($('.order-list li').index(this)).show();
+				})
+				
+				$('.stutas-btn input[name="refer-pay"]').click(function(){
+					$('.order-box .stutas').animate({"opacity":"1"},function(){
+						setTimeout('$(".order-box .stutas").animate({"opacity":"0"})',500)
+					}).html('已确认收货')
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>买手</title>
+		<link rel="stylesheet" href="css/hm-public.css" />
+		<link rel="stylesheet" href="css/hm-center.css" />
+	</head>
+
+	<body>
+		<header class="nav-bar-level">
+			<div class="left-box go-back">
+				<a href="javascript:window.history.go(-1)"></a>
+			</div>
+			<h1>发表评论</h1>
+			<div class="right-box">
+				<a href="javascript:void(0)">发布</a>
+			</div>
+		</header>
+		<div class="main  paddding-top-3-5">
+			<section class="forms-box">
+				<form class="forms-box-list">
+					<div class="bg-color-white">
+						<div class="star-box clearfix">
+							<p>请在此评分:</p>
+							<div id="xzw_starBox" class="xzw_starBox">
+								<ul class="star" id="star">
+									<li>
+										<a href="javascript:void(0)" title="1" class="one-star">1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" title="2" class="two-stars">2</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" title="3" class="three-stars">3</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" title="4" class="four-stars">4</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" title="5" class="five-stars">5</a>
+									</li>
+								</ul>
+								<div class="current-rating" id="showb" style="width: 0px;"></div>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div><textarea placeholder="附加描述" rows="5"></textarea></div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="color8">(照片至多上传9张)</div>
+							<div class="preview-list">
+								<ul class="clearfix">
+									<li><input type="file" accept="image/*" /> </li>
+									<li><span class="close-img"></span><img src="images/img8.jpg" /></li>
+									<li><span class="close-img"></span><img src="images/img8.jpg" /></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</form>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/js.js" ></script>
+		<script>
+			$(document).ready(function() {
+				var stepW = 24;
+				var stars = $("#star > li");
+				$("#showb").css("width", 0);
+				stars.each(function(i) {
+					$(stars[i]).click(function(e) {
+						var n = i + 1;
+						$("#showb").css({
+							"width": stepW * n
+						});
+						$(this).find('a').blur();
+						return stopDefault(e);
+					});
+				});
+			});
+
+			function stopDefault(e) {
+				if(e && e.preventDefault)
+					e.preventDefault();
+				else
+					window.event.returnValue = false;
+				return false;
+			};
+		</script>
+	</body>
+
+</html>
